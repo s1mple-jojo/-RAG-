@@ -36,7 +36,7 @@ SSE 流式输出
 
 克隆项目
 
-git clone https://github.com/s1mple-jojo/law-qa-rag.git
+[git clone https://github.com/s1mple-jojo/law-qa-rag.git](https://github.com/s1mple-jojo/-RAG-.git)
 cd law-qa-rag
 
 创建虚拟环境
@@ -230,5 +230,6 @@ Ollama is running
 MIT License
 
 # 作者
+
 
 s1mple-jojo
