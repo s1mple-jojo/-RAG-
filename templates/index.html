@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>法律知识问答（ChatGPT 风格）</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="logo">⚖️</div>
+        <div>
+          <div class="title">法律问答</div>
+          <div class="subtitle">RAG · FAISS · Ollama</div>
+        </div>
+      </div>
+
+      <div class="side-actions">
+        <button id="btnNew" class="btn">新对话</button>
+        <button id="btnClear" class="btn btnDanger">清空历史</button>
+      </div>
+
+      <div class="history">
+        <div class="historyHeader">
+          <span>历史记录（本地）</span>
+          <div class="historyTools">
+            <button id="btnExport" class="btnTiny">导出</button>
+            <label class="btnTiny fileLabel">
+              导入<input id="fileImport" type="file" accept="application/json" hidden />
+            </label>
+          </div>
+        </div>
+        <div id="historyList" class="historyList"></div>
+      </div>
+
+      <div class="footerTip">
+        提示：回答仅基于已加载法条材料，不构成法律意见。
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div class="topbarTitle">对话</div>
+        <div class="topbarMeta">
+          <span id="statusDot" class="dot"></span>
+          <span id="statusText">就绪</span>
+          <span class="sep">·</span>
+          <span id="latencyText">— ms</span>
+        </div>
+      </header>
+
+      <section id="chat" class="chat"></section>
+
+      <section class="composer">
+        <textarea id="input" rows="1" placeholder="输入你的法律问题…（Enter 发送，Shift+Enter 换行）"></textarea>
+        <button id="send" class="send">发送</button>
+      </section>
+    </main>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
